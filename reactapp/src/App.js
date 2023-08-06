@@ -1,26 +1,25 @@
 import React, { useState } from 'react';
-import './App.css';
-import Header from './Header';
-import Footer from './Footer';
-import CreateArea from './CreateArea';
-import Note from './Note';
+import CreateArea from './components/CreateArea';
+import Note from './components/Note';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-function App() {
+const App = () => {
   const [notes, setNotes] = useState([]);
 
-  const handleAddNote = (note) => {
-    setNotes((prevNotes) => [...prevNotes, note]);
+  const handleAddNote = (newNote) => {
+    setNotes((prevNotes) => [...prevNotes, newNote]);
   };
 
   const handleDeleteNote = (index) => {
-    setNotes((prevNotes) => prevNotes.filter((note, i) => i !== index));
+    setNotes((prevNotes) => prevNotes.filter((_, i) => i !== index));
   };
 
   return (
-    <div className="app">
+    <div>
       <Header />
       <CreateArea onAdd={handleAddNote} />
-      <div className="notes-container">
+      <div>
         {notes.map((note, index) => (
           <Note
             key={index}
@@ -33,6 +32,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

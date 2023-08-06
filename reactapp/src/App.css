@@ -1,54 +1,23 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-}
-
-.app {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-}
-
-header {
-  background-color: #4285f4;
-  color: #fff;
-  padding: 16px;
-  width: 100%;
-  text-align: center;
-}
-
-.create-area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.create-area input,
-.create-area textarea,
-.create-area button {
-  margin: 5px;
-}
-
-.note {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
-  max-width: 300px;
-}
-
-.notes-container {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  min-width: 1200px; /* Minimum width of the page */
+  min-height: 800px; /* Minimum height of the page */
 }
 
-footer {
-  background-color: #f2f2f2;
-  color: #555;
-  padding: 8px;
-  width: 100%;
-  text-align: center;
+header{
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+#title{
+  margin-left: 100px;
+  margin-right:1000px;
+  margin-top: 30px;
+
+}
+#desc{
+  margin:10px;
 }
